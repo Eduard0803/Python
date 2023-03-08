@@ -16,7 +16,10 @@ script desenvolvido para tirar fotos com a webcam, usando a biblioteca OpenCV
 # [voice-assist](https://github.com/Eduard0803/Python/blob/main/voice-assist.py)
 voice assistant prototype for windows
 
-> Examples:  
->> - Abrir o bloco de notas - for open 'notepad'
->> - Abrir a calculadora - for open 'calc'
->> - Abrir o Paint - for open 'paint'
+- Examples:  
+  - Abrir o bloco de notas - for open 'notepad'
+  - Abrir a calculadora - for open 'calc'
+  - Abrir o Paint - for open 'paint'
+
+# [ghost keyboard](https://github.com/Eduard0803/Python/blob/main/ghost-keyboard.py)
+código feito para simular interações entre o usuario e o computador, necessaria biblioteca `pyautogui`, `time` e `sys`
