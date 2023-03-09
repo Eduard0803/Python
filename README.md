@@ -23,3 +23,6 @@ voice assistant prototype for windows
 
 # [ghost keyboard](https://github.com/Eduard0803/Python/blob/main/ghost-keyboard.py)
 código feito para simular interações entre o usuario e o computador, necessaria biblioteca `pyautogui`, `time` e `sys`
+
+# [formulario web](https://github.com/Eduard0803/Python/blob/main/web-form/)
+script feito para o estudo dos metodos 'http'
