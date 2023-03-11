@@ -27,5 +27,11 @@ código feito para simular interações entre o usuario e o computador, necessar
 # [formulario web](https://github.com/Eduard0803/Python/blob/main/web-form/)
 script feito para o estudo dos metodos 'http'
 
-# [formulario](https://github.com/Eduard0803/Python/blob/main/form/)
+# [FastAPI](/FastAPI/)
+diretorio com os scripts feitos usando o framework 'FastAPI'
+
+- [formulario](/FastAPI/form/)
 script feito para estudar os metodos 'http' e framework 'FastAPI'  
+
+- [form_email](/FastAPI/form_with_email/)
+recebe os dados de um formulario html e depois envia esse dados atraves de e-mail
