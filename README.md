@@ -35,3 +35,6 @@ script feito para estudar os metodos 'http' e framework 'FastAPI'
 
 - [form_email](/FastAPI/form_with_email/)
 recebe os dados de um formulario html e depois envia esse dados atraves de e-mail
+
+- [2FA Authentication](/FastAPI/2FA/)
+autenticação de dois fatores, usando o FastAPI com a API Twilio
