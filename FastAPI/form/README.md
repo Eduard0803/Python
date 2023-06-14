@@ -1,4 +1,4 @@
-# formulario
+## formulario
 script feito para estudar os metodos 'http' e framework 'FastAPI'  
 
 para o correto funcionamento execute o código `pip install -r requirements.txt` no terminal  

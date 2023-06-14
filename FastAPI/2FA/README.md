@@ -1,4 +1,4 @@
-# 2FA Authentication
+## 2FA Authentication
 
 para o funcionamento execute o código `pip install -r requirements.txt` no terminal  
 
