@@ -1,3 +1,4 @@
+-- language: sql
 --
 -- PostgreSQL database dump
 --
