@@ -1,6 +1,9 @@
 ## [FastAPI](/FastAPI/)
 diretorio com os scripts feitos usando o framework 'FastAPI'
 
+- [FastAPI](/FastAPI_with_PostGreSQL/)
+pagina de `Login` e `Register` usando o FastAPI e armazenando os dados no PostGreSQL
+
 - [formulario](/FastAPI/form/)
 script feito para estudar os metodos 'http' e framework 'FastAPI'  
 
