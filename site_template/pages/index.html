@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="static/images/icon_4.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>'Titulo do Site'</title>
+  <link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero_content">
+        <h1>'Descrição Principal Serviço ou Produto'</h1>
+        <p>'Marketing'</p>
+        <a href="#contact" class="cta-button">Solicitar Orçamento</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>Sobre Nós</h2>
+        <p>'Texto Sobre a Empresa'</p>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2>Nossos 'Serviços ou Produtos'</h2>
+        <div class="service">
+          <img src="static/images/icon_4.png" alt="icon_1">
+          <h3>'Nome do Serviço ou Produto'</h3>
+          <p>'Descrição do Serviço ou Produto'</p>
+        </div>
+        <div class="service">
+          <img src="static/images/icon_4.png" alt="icon_2">
+          <h3>'Nome do Serviço ou Produto'</h3>
+          <p>'Descrição do Serviço ou Produto'</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Entre em Contato</h2>
+        <form method="post" action="/get_data">
+
+          <input type="text" name="name" placeholder="Seu Nome" required><br>
+          <input type="email" name="email" placeholder="Seu E-mail"><br>
+          <input type="tel" name="phone" placeholder="Seu Celular" required><br>
+          <textarea name="message" placeholder="Sua Mensagem (Opcional)"></textarea><br>
+
+          <input type="submit" value="Enviar">
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 'Nome da Empresa'. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
