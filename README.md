@@ -1,10 +1,10 @@
 ### [FastAPI](/FastAPI/)
 diretorio com os scripts feitos usando o framework 'FastAPI'
 
-- [Hash_file](/hash_file/)
+- [Hash_file](/FastAPI/hash_file/)
 verifica a autenticidade de documentos usando Hash MD5
 
-- [FastAPI](/FastAPI_with_PostGreSQL/)
+- [FastAPI](/FastAPI/FastAPI_with_PostGreSQL/)
 pagina de `Login` e `Register` usando o FastAPI e armazenando os dados no PostGreSQL
 
 - [formulario](/FastAPI/form/)
