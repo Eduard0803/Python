@@ -1,0 +1,4 @@
+reportlab
+uvicorn
+fastapi
+sqlalchemy
