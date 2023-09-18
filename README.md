@@ -21,6 +21,9 @@ faz a conexão e manipulação de dados com o PostGreSQL
 ### [RedisDB](/connection_RedisDB/)
 faz a conexão e manipulação de dados com o RedisDB
 
+### [OCR](/OCR/)
+extrai texto de imagens
+
 ### [formulario web](/web-form/)
 script feito para o estudo dos metodos 'http'
 
