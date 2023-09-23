@@ -4,11 +4,11 @@ diretorio com os scripts feitos usando o framework 'FastAPI'
 - [Hash_file](/FastAPI/hash_file/)
 verifica a autenticidade de documentos usando Hash MD5
 
-- [FastAPI](/FastAPI/FastAPI_with_PostGreSQL/)
-pagina de `Login` e `Register` usando o FastAPI e armazenando os dados no PostGreSQL
+- [Login Page](/FastAPI/Login_Page/)
+pagina de `Login` e `Register`
 
 - [formulario](/FastAPI/form/)
-script feito para estudar os metodos 'http' e framework 'FastAPI'  
+script feito para estudar os metodos 'http' e framework 'FastAPI'
 
 - [2FA Authentication](/FastAPI/2FA/)
 autenticação de dois fatores, usando o FastAPI com a API Twilio
