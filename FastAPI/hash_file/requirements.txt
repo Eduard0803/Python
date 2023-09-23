@@ -2,3 +2,4 @@ reportlab
 uvicorn
 fastapi
 sqlalchemy
+jinja2

@@ -1,9 +1,23 @@
-## formulario
+### formulario
 script feito para estudar os metodos 'http' e framework 'FastAPI'  
 
-para o correto funcionamento execute o código `pip install -r requirements.txt` no terminal  
+para instalar as depedencias:
 
-apos concluidas as instalações execute o código `uvicorn main:app --reload` no terminal  
+```
+make install
+```
+
+para iniciar o servidor:
+
+```
+make start
+```
+
+para encerrar o servidor:
+
+```
+make stop
+```
 
 o código cria recebe dados de um formulario html, formata os dados no formato `.json` e depois exibe os dados coletados em outra página html  
 
