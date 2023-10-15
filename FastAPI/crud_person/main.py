@@ -1,32 +1,41 @@
-import requests
-import json
+def main():
+    import requests
+    url = 'http://127.0.0.1:8000/person/'
 
-url_create = 'http://127.0.0.1:8000/create/{}/{}/'
-url_read = 'http://127.0.0.1:8000/read/{}/{}/'
+    op = int(input('''
+        1 - Create new register\n
+        2 - Read a register\n
+        3 - Update a register\n
+        4 - Delete a register\n
+        \nChoose the option: '''))
 
-def create(name:str=None, age:int=None):
-    if name is None or age is None:
-        return None
-    
-    response = requests.post(url_create.format(name, age))
-    return json.loads(response.text)
+    if op > 4 or op < 1:
+        print('Invalid Option\n')
+        return
+    email = input('Insert the E-mail: ')
+    if op == 1:
+        name = input('Insert the Name: ')
+        age = int(input('Insert the Age: '))
 
-def read(name:str=None, age:int=None):
-    if name is None or age is None:
-        return None
-    
-    response = requests.get(url_read.format(name, age))
-    return json.loads(response.text)
+        data = {}
+        data['name'] = name
+        data['email'] = email
+        data['age'] = age
+        response = requests.post(url, json=data)
+    elif op == 2:
+        response = requests.get(url + f'{email}/')
+    elif op == 3:
+        name = input('Insert the Name: ')
+        age = int(input('Insert the Age: '))
 
-op = int(input('1 - Create new register\n2 - Read a register\n\nChoose the option: '))
+        data = {}
+        data['name'] = name
+        data['email'] = email
+        data['age'] = age
+        response = requests.put(url, json=data)
+    elif op == 4:
+        response = requests.delete(url + f'{email}/')
+    print('\n', response.json(), '\n')
 
-n = input('Insert the Name: ')
-a = int(input('Insert the Age: '))
-
-if op == 1:
-    data = create(n, a)
-    print('\n', data)
-
-elif op == 2:
-    data = read(n, a)
-    print('\n', data)
+if __name__ == '__main__':
+    main()
