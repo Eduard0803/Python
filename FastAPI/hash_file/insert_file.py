@@ -1,11 +1,15 @@
-from db_config import Session, DefaultTable
+from db_config import DefaultTable, Session
+
 
 def insert_file(file_name, file_content, hash_file):
     session = Session()
-    new_file = DefaultTable(file_name=file_name, file_content=file_content, hash_file=hash_file)
+    new_file = DefaultTable(
+        file_name=file_name, file_content=file_content, hash_file=hash_file
+    )
     session.add(new_file)
     session.commit()
     session.close()
+
 
 def query_file(hash_file):
     session = Session()

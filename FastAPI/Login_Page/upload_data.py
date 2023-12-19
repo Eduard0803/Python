@@ -1,9 +1,11 @@
 from connection import conn
 
-def upload_data(name: str=None, age: int=None, email: str=None, password:str=None) -> None:
-    
+
+def upload_data(
+    name: str = None, age: int = None, email: str = None, password: str = None
+) -> None:
     cur = conn.cursor()
-    sql_command = '''CREATE TABLE IF NOT EXISTS test (id INT, name VARCHAR(255), age INT, email VARCHAR(255), password VARCHAR(255));'''
+    sql_command = """CREATE TABLE IF NOT EXISTS test (id INT, name VARCHAR(255), age INT, email VARCHAR(255), password VARCHAR(255));"""
     cur.execute(sql_command)
 
     cur.execute("SELECT COUNT(*) FROM test;")
@@ -16,5 +18,6 @@ def upload_data(name: str=None, age: int=None, email: str=None, password:str=Non
     conn.commit()
     cur.close()
 
-if __name__ == '__main__':
-    upload_data('Test', 0, 'example@gmail.com', '12345678')
+
+if __name__ == "__main__":
+    upload_data("Test", 0, "example@gmail.com", "12345678")

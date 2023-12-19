@@ -1,5 +1,7 @@
 import os
-from db_config import Session, DefaultTable
+
+from db_config import DefaultTable, Session
+
 
 def insert_file(file_name, file_content):
     session = Session()
@@ -7,6 +9,7 @@ def insert_file(file_name, file_content):
     session.add(new_file)
     session.commit()
     session.close()
+
 
 def query_file_by_name(file_name):
     session = Session()
@@ -17,25 +20,23 @@ def query_file_by_name(file_name):
 
 
 if __name__ == "__main__":
-
-    file_path = input('Insert the file name: ')
+    file_path = input("Insert the file name: ")
 
     if os.path.exists(file_path):
-
-        option = int(input('\n1 - insert file\n2 - query file\n\nselect the option: '))
+        option = int(input("\n1 - insert file\n2 - query file\n\nselect the option: "))
         if option == 1:
-            with open(file_path, 'rb') as file:
+            with open(file_path, "rb") as file:
                 file_data = file.read()
             insert_file(file_path, file_data)
-            print('sucess')
+            print("sucess")
         else:
             content = query_file_by_name(file_path)
             if not content:
-                print('file not found')
+                print("file not found")
             else:
-                name = input('input the new name: ')
-                with open(name, 'wb') as file:
+                name = input("input the new name: ")
+                with open(name, "wb") as file:
                     file.write(content.file_content)
-                print('sucess')
+                print("sucess")
     else:
-        print('file not found')
+        print("file not found")

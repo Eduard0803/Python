@@ -1,4 +1,5 @@
-from db_config import Session, DefaultTable
+from db_config import DefaultTable, Session
+
 
 def insert_person(p):
     session = Session()
@@ -7,7 +8,8 @@ def insert_person(p):
     session.commit()
     session.close()
 
-def query_person(email:str=None):
+
+def query_person(email: str = None):
     if email is None:
         return None
     session = Session()
@@ -17,7 +19,8 @@ def query_person(email:str=None):
         return None
     return person
 
-def update_person(p)->bool:
+
+def update_person(p) -> bool:
     session = Session()
     person = session.query(DefaultTable).filter_by(email=p.email.lower()).first()
     if person is None:
@@ -29,7 +32,8 @@ def update_person(p)->bool:
     session.close()
     return True
 
-def delete_person(email:str=None)->bool:
+
+def delete_person(email: str = None) -> bool:
     if email is None:
         return False
     session = Session()
