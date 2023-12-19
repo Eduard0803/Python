@@ -1,0 +1,30 @@
+name: reformat .py files
+
+on: push
+
+jobs:
+  reformat:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+    - name: Install dependencies
+      run: |
+        pip install black isort
+        git config --global user.email "actions@github.com"
+        git config --global user.name "GitHub Actions"
+    - name: run isort
+      run: isort .
+    - name: run black
+      run: black .
+    - name: Commit changes
+      run: |
+        git add .
+        git diff-index --quiet HEAD || git commit -m "auto-reformat files"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
