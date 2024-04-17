@@ -8,7 +8,7 @@ app.add_middleware(
     allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
-    allow_headers=["*"]
+    allow_headers=["*"],
 )
 
 
@@ -19,6 +19,7 @@ def root():
 
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run(
         app="server:app",
         host="0.0.0.0",
