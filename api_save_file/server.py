@@ -2,10 +2,9 @@ import os
 from io import BytesIO
 
 import uvicorn
-from fastapi import FastAPI, status, requests, UploadFile
-from fastapi.responses import JSONResponse
+from fastapi import FastAPI, UploadFile, requests, status
 from fastapi.middleware.cors import CORSMiddleware
-
+from fastapi.responses import JSONResponse
 
 app = FastAPI()
 
@@ -17,24 +16,24 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 @app.on_event("startup")
 def startup_event():
     os.makedirs("files", exist_ok=True)
 
+
 @app.get("/")
 def root():
     return JSONResponse(
-        status_code=status.HTTP_200_OK,
-        content={
-            "message": "Hello World"
-        }
+        status_code=status.HTTP_200_OK, content={"message": "Hello World"}
     )
+
 
 @app.post("/uploadfile/")
 async def save_file(file: UploadFile):
     file_object = file.file
     file_object.seek(0)
-    
+
     content_ = await file.read()
     content = BytesIO(content_)
 
@@ -43,15 +42,9 @@ async def save_file(file: UploadFile):
 
     return JSONResponse(
         status_code=status.HTTP_200_OK,
-        content={
-            "filename": f"{file.filename} saved with success"
-        }
+        content={"filename": f"{file.filename} saved with success"},
     )
 
-if __name__ == '__main__':
-    uvicorn.run(
-        app="server:app",
-        host="127.0.0.1",
-        port=8000,
-        reload=True
-    )
+
+if __name__ == "__main__":
+    uvicorn.run(app="server:app", host="127.0.0.1", port=8000, reload=True)
